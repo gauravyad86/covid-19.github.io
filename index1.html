@@ -1,0 +1,122 @@
+<!-- loader from https://codepen.io/slmnbj/pen/fJGdH -->
+
+<!--
+    Date : 14-07-2020 11:41 AM
+    
+    Credit goes to https://github.com/psycho-2025/covid19 for API
+    https://canvasjs.com/ for Pie Chart
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Covid-19 Info</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link href="style1.css" rel="stylesheet" type="text/css">
+        <script type="text/javascript" src="p5.js"></script>
+        
+    </head>
+    <body>
+        <div class="loader">
+            <div>V</div>
+            <div>A</div>
+            <div>R</div>
+            <div>U</div>
+            <div>A</div>
+            <div>G</div>
+            
+        </div>
+        <div class="card" id="card1">
+            <div class= "card-header bg-primary text-white">Corona Live Info</div>
+            <div class = "card-body">
+                <div id="profileDetails">
+                    <div id = "top10">
+                        <button onclick="getTopTenCountriesByDeath()" class="btn btn-danger">Top 10 Country By Death</button>
+                        <button onclick="getTopTenCountriesByTotal()" class="btn btn-primary">Top 10 Country By Total Cases</button>
+                        <button onclick="getTopTenCountriesByActive()" class="btn btn-info">Top 10 Country By Active Cases</button>
+                        <button onclick="someInfo()" class="btn btn-success">Some Prevention on Corona Virus</button>
+                    </div>
+                    
+                    <p><input type="text" id="myInput" onkeyup="filterTable()" placeholder="Filter by Country..." title="Type in a name"></p>
+                    <button class = "collapsible">Total Summary</button>
+                    <div class="totalContent">
+                        <span id = "totalConfirmed"><br><br> Total Confirmed</span>
+                        <span id = "totalRecovered"><br><br> Total Recovered</span>
+                        <span id = "totalDeath"><br><br> Total Deaths</span>
+                    </div>
+                    <div class="totalContent1">
+                        <span id = "totalActive"><br><br> Total Active</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="card-footer bg-info text-white">Copyright @ <script>document.write(new Date().getFullYear());</script> <b class="name" id="name1">Gaurav Yadav</b></div>
+        </div>
+        <div class="modal" id="myModal">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                
+                            <!-- Modal Header -->
+                            <div class="modal-header bg-primary text-white">
+                                <h6 class="modal-title">Top 10 Countries Info</h6>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div id="chartContainer" style="height: 450px; width: 100%;"></div>
+                            <div>
+                                <p>Click on circle to check details.</p>
+                            </div>
+                            <div id="chartContainer1" style="height: 450px; width: 100%;"></div>
+                            <div>
+                                <p>Click on box to check details.</p>
+                            </div>
+                            <div id="chartContainer2" style="height: 450px; width: 100%;"></div>
+                            <div>
+                                <p>Click on box to check details.</p>
+                            </div>
+                
+                            <!-- Modal footer -->
+                            <div class="modal-footer bg-info text-white">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        </div>
+                </div>
+                <div class="modal" id="myModal1">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                
+                            <!-- Modal Header -->
+                            <div class="modal-header bg-primary text-white">
+                                <h6 class="modal-title">Prevent the spread of COVID-19</h6>
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            </div>
+                            <div class = "model-body">
+                                <ul>
+                                    <li>Wash your hands for at least 20 seconds, several times a day. Use soap and water or a hand sanitizer with at least 60% alcohol.</li>
+                                    <li>Don’t touch your eyes, nose or mouth.</li>
+                                    <li>Maintain a safe distance from anyone who is coughing or sneezing.</li>
+                                    <li>Don’t travel if you have a fever. If you get sick on flight, tell crew immediately. When you get home, contact a health professional.</li>
+                                    <li>Cover your nose and mouth with your bent elbow or a tissue when you cough or sneeze.</li>
+                                    <li>Don’t panic. Public health officials still say the risk of becoming infected with COVID-19 is low, but your risk level is likely to rise as the virus spreads across the country.</li>
+                                    <li>Stay home if you feel unwell.</li>
+                                    <li>Don’t skip the flu shot. The symptoms of COVID-19 and flu overlap enough that it can complicate diagnosis. If you’ve had a flu shot, you’re less likely to catch the flu or have a case serious enough to require treatment.</li>
+                                    <li>If you have a fever, a cough, and difficulty breathing, seek medical attention. Call in advance.</li>
+                                    <li>Don’t go to the doctor unless it’s urgent. And reschedule your dental cleaning. The CDC is urging all health care professionals to focus on emergency treatments now.</li>
+                                    <li>Follow the directions of your local health authority.</li>
+                                    <li>Don't go near seniors or those at higher risk for severe illness. You may be able to transmit the virus even if you feel fine. Now is not the time to pay a visit to grandma, or your friend with asthma.</li>
+                                    <li>Treat the sickness. Keep the sick person hydrated with plenty of fluids, and use over-the-counter medications for individual symptoms.</li>
+                                </ul>
+                            </div>
+                
+                            <!-- Modal footer -->
+                            <div class="modal-footer bg-info text-white">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <script type="text/javascript" src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+    </body>
+</html>

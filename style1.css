@@ -1,0 +1,334 @@
+body {
+   margin:0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+     background-color: #22475E;
+  scroll-behavior: smooth;
+}
+
+.card {
+    max-width: 100%;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+}
+
+#card1 {
+    display:none;
+}
+
+.card-header, .datadiv {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card {
+    color: #000;
+    background: #22475E;
+    background-repeat:no-repeat;
+    background-image:cover;
+    background-attachment:fixed;
+}
+
+.info {
+    margin-bottom: 10px;
+    color:#fff;
+    padding: 5px 0;
+    border-width: 1px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 500px;
+}
+
+.loader div {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background-color: #ccc;
+  top: 45%;
+  padding-top:13px;
+  font-size:18px;
+  text-align:center;
+  border-radius: 50%;
+}
+
+.loader div:nth-child(1) {
+  background-color: #FF5460;
+  animation: move 2s infinite cubic-bezier(.2,.64,.81,.23);
+}
+.loader div:nth-child(2) {
+  background-color: #FF9D84;
+  animation: move 2s 150ms infinite cubic-bezier(.2,.64,.81,.23);
+}
+.loader div:nth-child(3) {
+  background-color: #F0E797;
+  animation: move 2s 300ms infinite cubic-bezier(.2,.64,.81,.23);
+}
+.loader div:nth-child(4) {
+  background-color: #75B08A;
+  animation: move 2s 450ms infinite cubic-bezier(.2,.64,.81,.23);
+}
+
+
+@keyframes move {
+  0% {left: 0%;}
+  100% {left:100%;}
+}
+
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.icon {
+    color:white;
+}
+
+.nameLink {
+    color: #000;
+}
+
+.text-white {
+    font-weight:bold;
+    font-size:20px;
+}
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 20px;
+}
+
+.active2, .collapsible:hover {
+  background-color: #555;
+}
+
+.collapsible:after {
+  /*content: '\002B';*/
+  color: white;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active2:after {
+  content: "\2212";
+}
+
+.content1 {
+  padding: 2px 8px;
+  max-height: 200px;
+  /*overflow: hidden;*/
+  transition: max-height 0.2s ease-out;
+  background-color: #f1f1f1;
+  margin-bottom:7px;
+}
+
+.content1 span {
+    display:-moz-inline-block;
+    display:-moz-inline-box;
+    display:inline-block;
+    padding: 5px;
+    overflow:hidden; /* just in case a value goes out of bounds */
+    width:105px;
+    font:normal 15px/18px arial,helvetica,sans-serif;
+    position:relative;
+}
+
+.content1 p {
+    border-top-width:2px;
+    border-top-style: solid;
+    border-top-color: coral;
+    font:normal 15px/18px arial,helvetica,sans-serif;
+}
+
+#myInput {
+  background-image: url('https://www.w3schools.com/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  color: #000;
+  margin-top:10px;
+}
+
+.totalContent span {
+    display:-moz-inline-block;
+    display:-moz-inline-box;
+    display:inline-block;
+    padding: 10px 5px;
+    overflow:hidden; /* just in case a value goes out of bounds */
+    width:31%;
+    font:normal 13px/16px arial,helvetica,sans-serif;
+    position:relative;
+    background: #fff;
+}
+
+.totalContent1 span {
+    display:-moz-inline-block;
+    display:-moz-inline-box;
+    display:inline-block;
+    padding: 10px 5px;
+    overflow:hidden; /* just in case a value goesout of bounds */
+    width:100%;
+    font:normal 13px/16px arial,helvetica,sans-serif;
+    position:relative;
+    background: #fff;
+}
+
+#chartContainer, #chartContainer1, #chartContainer2 {
+    overflow-x:scroll;
+    overflow-y:hidden;
+}
+
+#top10 button {
+    width:100%;
+    margin-bottom: 5px;
+}
+
+.confirmed, .recovered {
+    border-right-width:2px;
+    border-right-style: solid;
+    border-right-color: coral;
+}
+
+.recovered, #totalRecovered {
+    color: green;
+}
+
+.death, #totalDeath {
+    color: red;
+}
+
+@media all and (max-width: 600px) {
+  .content1 span {
+        padding: 10px;
+        overflow:hidden; /* just in case a value goes out of bounds */
+        width:25%;
+        font:normal 12px/14px arial,helvetica,sans-serif;
+    }
+    
+    .content1 p {
+        padding: 3px;
+        overflow:hidden; /* just in case a value goes out of bounds */
+        font:normal 12px/14px arial,helvetica,sans-serif;
+    }
+    
+    .totalContent span {
+        padding: 10px 5px;
+        overflow:hidden; /* just in case a value goes out of bounds */
+        width:25%;
+        font:normal 12px/14px arial,helvetica,sans-serif;
+    }
+}
+
+@media all and (min-width: 600px) and (max-width: 768px) {
+  .content1 span {
+        padding: 10px;
+        overflow:hidden; /* just in case a value goes out of bounds */
+        width:25%;
+        font:normal 12px/14px arial,helvetica,sans-serif;
+    }
+    
+    .content1 p {
+        padding: 3px;
+        overflow:hidden; /* just in case a value goes out of bounds */
+        font:normal 12px/14px arial,helvetica,sans-serif;
+    }
+    
+    .totalContent span {
+        padding: 10px 5px;
+        overflow:hidden; /* just in case a value goes out of bounds */
+        width:25%;
+        font:normal 12px/14px arial,helvetica,sans-serif;
+    }
+}
+
+.model-body {
+    padding: 5px;
+}
+
+.model-body ul li {
+    list-style-type: none;
+    padding:5px;
+}
+
+.model-body li:nth-child(odd):before{
+  content:'\2713';
+  display:inline-block;
+  vertical-align: top;
+  line-height: 1em;
+  font-size:2em;
+  width: 1em;
+  height:0.5em;
+  margin-right: 0.3em;
+  text-align: center;
+  color: green;
+}
+
+.model-body li:nth-child(even):before{
+  content:'\0058';
+  display:inline-block;
+  vertical-align: top;
+  line-height: 1em;
+  font-size:2em;
+  width: 1em;
+  height:0.5em;
+  margin-right: 0.3em;
+  text-align: center;
+  color: red;
+}
+
+.model p {
+    color : #000;
+    text-align:center ;
+}
